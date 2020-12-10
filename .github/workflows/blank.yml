@@ -6,7 +6,7 @@ on: [push]
 
 jobs:
   hello_world_job:
-    runs-on: my-computer
+    runs-on: derek
     name: A job to say hello
     steps:
     - uses: actions/checkout@v2
