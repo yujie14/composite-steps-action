@@ -6,7 +6,7 @@ on: push
 
 jobs:
   one:
-    runs-on: self
+    runs-on: linux
     steps:
       - name: Dump GitHub context
         env:
