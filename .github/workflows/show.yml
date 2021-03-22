@@ -16,6 +16,8 @@ jobs:
         env:
           JOB_CONTEXT: ${{ toJson(job) }}
         run: echo "$JOB_CONTEXT"
+      - name: random-number-generator
+        run: echo "::set-output name=random-id::$(echo -n $RANDOM)"
       - name: Dump steps context
         env:
           STEPS_CONTEXT: ${{ toJson(steps) }}
