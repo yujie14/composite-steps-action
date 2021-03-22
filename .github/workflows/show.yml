@@ -17,6 +17,7 @@ jobs:
           JOB_CONTEXT: ${{ toJson(job) }}
         run: echo "$JOB_CONTEXT"
       - name: random-number-generator
+        id: random-number-generator
         run: echo "::set-output name=random-id::$(echo -n $RANDOM)"
       - name: echo output
         run: echo ${{steps.random-number-generator.outputs.random-id}}
